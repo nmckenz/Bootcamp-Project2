@@ -236,5 +236,112 @@ html {
 }
 
 body {
+  border: 1px solid red;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 125%;
+  color: #0D0D0D;
+}
+
+h1 {
+  font-family: 'Pompiere', cursive;
+  font-size: 5.5rem;
+  line-height: 3.2rem;
+  color: #4C0341;
+}
+
+h2 {
+  font-family: 'Pompiere', cursive;
+  font-size: 3.2rem;
+  line-height: 64px;
+  color: #4C0341;
+}
+
+h3 {
+  font-family: 'Pompiere', cursive;
+  font-size: 2.6rem;
+}
+
+.headingThreeTypeOne {
+  letter-spacing: 1.6px;
+}
+
+.headingThreeTypeTwo {
+  color: #4C0341;
+  letter-spacing: 1.2px;
+  text-align: center;
+}
+
+.headingThreeTypeThree {
+  color: #4C0341;
+  letter-spacing: 1.2px;
+}
+
+h4 {
+  font-family: 'Pompiere', cursive;
+  font-size: 2.1rem;
+  letter-spacing: 1.3px;
+}
+
+.logo {
+  font-family: 'Pompiere', cursive;
+  font-size: 1.79rem;
+  line-height: 1.8rem;
+  letter-spacing: 1.1px;
+}
+
+h5 {
+  font-family: 'Pompiere', cursive;
+  font-size: 1.5rem;
+  letter-spacing: 1.3px;
+  color: #4C0341;
+}
+
+button {
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6rem;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+header.headerIndex {
+  background: url("../assets/header-image.jpg");
+  background-size: cover;
+  height: 60vh;
+}
+
+header.headerBlog {
+  background: url("../assets/blog-header.jpg");
+  background-size: cover;
+  height: 60vh;
+}
+
+header.headerContact {
+  background: url("../assets/contact-image.jpg");
+  background-size: cover;
+  height: 60vh;
+}
+
+nav {
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1.45rem;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+body {
   background: palegoldenrod;
+}
+
+footer {
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6rem;
+  text-align: center;
+  background-color: #882C07;
 }

@@ -1,0 +1,152 @@
+// COLORS-----------------------------------
+
+
+// Plum purple
+// #4C0341
+// 76, 3, 65
+// Orange
+// #FE6F19
+// 254, 111, 25
+// White
+// #FFFFFF
+// 255, 255, 255
+// Black
+// #0D0D0D
+// 13, 13, 13
+// Brown red
+// #882C07
+// 136, 44, 7
+// Pale mauve
+// #FAE5FF
+// 250, 229, 255
+
+
+// FONTS--------------------------------------------
+
+
+
+
+//     font-family: 'Pompiere', cursive;
+
+//     font-family: 'Lato', sans-serif;
+
+body {
+    border: 1px solid red;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 125%;
+    color: $primaryFontColor;
+}
+
+
+h1 {
+    font-family: 'Pompiere', cursive;
+    font-size: 5.5rem;
+    line-height: 3.2rem;
+    color: $highlightColor;
+}
+
+// Heading (Find something new)
+// Pompiere, Regular, 110px
+// Line height: 64px
+
+h2 {
+    font-family: 'Pompiere', cursive;
+    font-size: 3.2rem;
+    line-height: 64px;
+    color: $highlightColor;
+}
+
+// Headings ( Get in touch, Blog)
+// Pompiere, Regular, 80px
+// Line height: 92px
+
+h3 {
+    font-family: 'Pompiere', cursive;
+    font-size: 2.6rem;
+}
+
+.headingThreeTypeOne {
+    letter-spacing: 1.6px;
+}
+
+// Headings (Locat..,Commu..,Blog, Get in..)
+// Pompiere, Regular, 52px
+// Letter spacing: 1.6px
+
+
+
+.headingThreeTypeTwo {
+    color: $highlightColor;
+    letter-spacing: 1.2px;
+    text-align: center;
+}
+
+// Headings (What is under.., This month...)
+// Pompiere, Regular, 52px
+// Center, Letter spacing: 1.2px
+
+
+
+.headingThreeTypeThree {
+    color: $highlightColor;
+    letter-spacing: 1.2px;
+}
+
+// headings (Popular..,Shoes arou..,)
+// Pompiere, Regular, 52px
+// Letter spacing: 1.2px
+
+
+
+h4 {
+    font-family: 'Pompiere', cursive;
+    font-size: 2.1rem;
+    letter-spacing: 1.3px;
+}
+
+// Headings (New additio...,Meet real
+// Pompiere, Regular, 42px
+// Letter spacing: 1.3px
+
+
+
+.logo {
+    font-family: 'Pompiere', cursive;
+    font-size: 1.79rem;
+    line-height: 1.8rem;
+    letter-spacing: 1.1px;
+}
+
+// Logo
+// Pompiere, Regular, 35.8px
+// Line height: 36px, Letter spacing: 1.1px
+
+
+
+h5 {
+    font-family: 'Pompiere', cursive;
+    font-size: 1.5rem;
+    letter-spacing: 1.3px;
+    color: $highlightColor;
+}
+
+// Headings (Any weather, Recent posts)
+// Pompiere, Regular, 30px
+// Letter spacing: 1.3px
+
+
+
+button {
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6rem;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+// Buttons
+// Lato, Regular, 20px
+// Center, Line height: 32px, Letter spacing: 1px

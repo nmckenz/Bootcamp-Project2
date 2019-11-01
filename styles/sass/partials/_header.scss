@@ -1,0 +1,22 @@
+// begin index.html styling---------------------------
+header.headerIndex {
+    @include headerBackground(header-image)
+}
+
+// end index.html styling------------------------------
+
+
+
+// begin blog.html styling-----------------------------
+header.headerBlog {
+    @include headerBackground(blog-header)
+}
+// end blog.html styling-------------------------------
+
+
+
+// begin contact.html styling--------------------------
+header.headerContact {
+    @include headerBackground(contact-image)
+}
+// end contact.html styling----------------------------
