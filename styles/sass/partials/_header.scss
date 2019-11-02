@@ -1,6 +1,8 @@
 // begin index.html styling---------------------------
 header.headerIndex {
-    @include headerBackground(header-image)
+    @include backgroundImages(header-image, jpg);
+    height: $heroHeights;
+    padding-top: 1%;
 }
 
 // end index.html styling------------------------------
@@ -9,7 +11,8 @@ header.headerIndex {
 
 // begin blog.html styling-----------------------------
 header.headerBlog {
-    @include headerBackground(blog-header)
+    @include backgroundImages(blog-header, jpg);
+    height: $heroHeights;
 }
 // end blog.html styling-------------------------------
 
@@ -17,6 +20,7 @@ header.headerBlog {
 
 // begin contact.html styling--------------------------
 header.headerContact {
-    @include headerBackground(contact-image)
+    @include backgroundImages(contact-image, jpg);
+    height: $heroHeights;
 }
 // end contact.html styling----------------------------

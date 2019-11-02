@@ -10,3 +10,30 @@ nav {
 // Nav
 // Lato, Bold, 20px
 // Center, Line height: 29px, Letter spacing: 1px
+
+.flexContainerNav {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-flow: row nowrap;
+    width: 40%;
+    justify-content: space-between;
+    align-items: flex-start;
+
+}
+
+nav a {
+    text-transform: capitalize;
+    text-decoration: none;
+    padding: 10px;
+}
+
+nav a:hover {
+    background-color: $highlightColor;
+    color: #fff;
+}

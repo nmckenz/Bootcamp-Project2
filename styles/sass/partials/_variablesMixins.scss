@@ -1,12 +1,25 @@
-@mixin headerBackground($imageName) {
-    $imageURL:"../assets/#{$imageName}.jpg";
+// @mixin headerBackground($imageName) {
+//     $imageURL:"../assets/#{$imageName}.jpg";
+//     background: url($imageURL);
+//     background-size: cover;
+//     height: 60vh;
+// }
+
+@mixin backgroundImages($imageName, $imageType) {
+    $imageURL:"../assets/#{$imageName}.#{$imageType}";
     background: url($imageURL);
     background-size: cover;
-    height: 60vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    // height: 60vh;
 }
+
+
 
 $primaryBackgroundColor: #FAE5FF;
 $footerBackgroundColor: #882C07;
 $primaryFontColor:#0D0D0D;
 $highlightColor: #4C0341;
 $shadowBoxColor: #FE6F19;
+
+$heroHeights: 60vh;

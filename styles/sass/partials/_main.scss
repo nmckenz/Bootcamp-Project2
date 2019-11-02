@@ -1,15 +1,101 @@
-body {
-    background: palegoldenrod
+.findOutButton {
+    // width: 50px;
+    // height: 15px;
 }
 
-// begin index.html styling-------------------------
+// begin index.html styling========================
+
+
+.aboutSection, .midNavSection {
+    background-color: $primaryBackgroundColor;
+}
+// begin about section styling-------------------
+.aboutSection {
+    position: relative;
+    text-align: center;
+    padding: 15vh 0;
+}
+.aboutImage {
+    // background: url("../assets/home-box-header.png");
+    @include backgroundImages(home-box-header, png)
+    height: 65vh;
+    width: 65vh;
+    position: absolute;
+    top: -375px;
+    right: 0;
+
+}
+.aboutSection h3 {
+    color: $highlightColor;
+}
+.aboutSection button {
+    background-color: $highlightColor;
+    border: none;
+}
+// end about section styling----------------------
+
+.latestProductSection, .popularProductsSection {
+    background-color: #FFF;
+    
+}
+// begin latest product section------------------
+.latestProductSection {
+    display: flex;
+    flex-flow: column nowrap;
+    // padding: 15vh 0;
+    height: 15vh;
+}
+
+.latestProductOne {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.latestProductImage {
+    width: 50%;
+    height: 100%;
+}
+
+.latestProductOneImage {
+    @include backgroundImages(left-image, jpg);
+}
+
+.latestProductOneContent {
+    width: 50%;
+    height: 50%;
+}
+
+.latestProductTwo {
+    display: flex;
+    flex-direction: row;
+}
+
+.latestProductTwoImage {
+    @include backgroundImages(right-image, jpg);
+    width: 50%;
+}
+
+.latestProductTwoContent {
+    width: 50%;
+}
+// end latest product section---------------------
+
+// begin mid nav section---------------------------
+.midNavSection {
+    
+}
+// end mid nav section-----------------------------
+
+// begin popular products section-------------------
 
 
 
+// end index.html styling========================
 
-// end index.html styling---------------------------
 
-// begin blog.html styling---------------------------
+
+// begin blog.html styling=========================
 .blogPostImage {
     background: url(../assets/blog-post-image.jpg);
     background-size: cover;
@@ -33,13 +119,15 @@ body {
 
 
 
-// end blog.html styling-----------------------------
-
-// begin contact.html styling------------------------
+// end blog.html styling=============================
 
 
 
+// begin contact.html styling========================
 
 
-// end contact.html styling---------------------------
+
+
+
+// end contact.html styling==========================
 

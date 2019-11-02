@@ -235,7 +235,7 @@ html {
   overflow: hidden;
 }
 
-body {
+* {
   border: 1px solid red;
 }
 
@@ -245,11 +245,22 @@ body {
   color: #0D0D0D;
 }
 
+.wrapper {
+  margin: 0 10%;
+}
+
 h1 {
   font-family: 'Pompiere', cursive;
   font-size: 5.5rem;
   line-height: 3.2rem;
   color: #4C0341;
+  margin: 0;
+  padding-top: 10vh;
+  width: 26%;
+}
+
+h1::first-letter {
+  text-transform: capitalize;
 }
 
 h2 {
@@ -257,11 +268,15 @@ h2 {
   font-size: 3.2rem;
   line-height: 64px;
   color: #4C0341;
+  margin: 0;
+  text-transform: uppercase;
 }
 
 h3 {
   font-family: 'Pompiere', cursive;
   font-size: 2.6rem;
+  margin: 0;
+  text-transform: uppercase;
 }
 
 .headingThreeTypeOne {
@@ -283,6 +298,8 @@ h4 {
   font-family: 'Pompiere', cursive;
   font-size: 2.1rem;
   letter-spacing: 1.3px;
+  margin: 0;
+  text-transform: uppercase;
 }
 
 .logo {
@@ -290,6 +307,10 @@ h4 {
   font-size: 1.79rem;
   line-height: 1.8rem;
   letter-spacing: 1.1px;
+  margin: 0;
+  text-transform: capitalize;
+  width: 65px;
+  height: 65px;
 }
 
 h5 {
@@ -297,6 +318,8 @@ h5 {
   font-size: 1.5rem;
   letter-spacing: 1.3px;
   color: #4C0341;
+  margin: 0;
+  text-transform: uppercase;
 }
 
 button {
@@ -305,23 +328,36 @@ button {
   line-height: 1.6rem;
   letter-spacing: 1px;
   text-align: center;
+  text-transform: capitalize;
+  color: #fff;
+}
+
+p {
+  margin: 0;
 }
 
 header.headerIndex {
   background: url("../assets/header-image.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   height: 60vh;
+  padding-top: 1%;
 }
 
 header.headerBlog {
   background: url("../assets/blog-header.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   height: 60vh;
 }
 
 header.headerContact {
   background: url("../assets/contact-image.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   height: 60vh;
 }
 
@@ -334,8 +370,142 @@ nav {
   text-align: center;
 }
 
-body {
-  background: palegoldenrod;
+.flexContainerNav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+nav ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  width: 40%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+nav a {
+  text-transform: capitalize;
+  text-decoration: none;
+  padding: 10px;
+}
+
+nav a:hover {
+  background-color: #4C0341;
+  color: #fff;
+}
+
+.aboutSection, .midNavSection {
+  background-color: #FAE5FF;
+}
+
+.aboutSection {
+  position: relative;
+  text-align: center;
+  padding: 15vh 0;
+}
+
+.aboutImage {
+  background: url("../assets/home-box-header.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 65vh;
+  width: 65vh;
+  position: absolute;
+  top: -375px;
+  right: 0;
+}
+
+.aboutSection h3 {
+  color: #4C0341;
+}
+
+.aboutSection button {
+  background-color: #4C0341;
+  border: none;
+}
+
+.latestProductSection, .popularProductsSection {
+  background-color: #FFF;
+}
+
+.latestProductSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  height: 15vh;
+}
+
+.latestProductOne {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+}
+
+.latestProductImage {
+  width: 50%;
+  height: 100%;
+}
+
+.latestProductOneImage {
+  background: url("../assets/left-image.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.latestProductOneContent {
+  width: 50%;
+  height: 50%;
+}
+
+.latestProductTwo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.latestProductTwoImage {
+  background: url("../assets/right-image.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 50%;
+}
+
+.latestProductTwoContent {
+  width: 50%;
 }
 
 .blogPostImage {
