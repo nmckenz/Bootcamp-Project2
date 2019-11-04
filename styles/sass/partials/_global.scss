@@ -168,8 +168,9 @@ button {
     line-height: 1.6rem;
     letter-spacing: 1px;
     text-align: center;
-    text-transform: capitalize;
+    text-transform: uppercase;
     color: #fff;
+    border: none;
 }
 
 // Buttons
@@ -177,5 +178,10 @@ button {
 // Center, Line height: 32px, Letter spacing: 1px
 
 p {
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
     margin: 0;
 }

@@ -5,6 +5,10 @@
 
 // begin index.html styling========================
 
+// TO DO
+// fix spacing on new products
+// fix margins between icon and text in mid nav
+
 
 .aboutSection, .midNavSection {
     background-color: $primaryBackgroundColor;
@@ -15,19 +19,26 @@
     text-align: center;
     padding: 15vh 0;
 }
+
 .aboutImage {
     // background: url("../assets/home-box-header.png");
     @include backgroundImages(home-box-header, png)
-    height: 65vh;
-    width: 65vh;
+    height: 60vh;
+    width: 60vh;
     position: absolute;
     top: -375px;
     right: 0;
 
 }
+
 .aboutSection h3 {
     color: $highlightColor;
 }
+
+.aboutSection p {
+    margin: 25px 0;
+}
+
 .aboutSection button {
     background-color: $highlightColor;
     border: none;
@@ -43,52 +54,194 @@
     display: flex;
     flex-flow: column nowrap;
     // padding: 15vh 0;
-    height: 15vh;
+    height: 80vh;
+}
+
+.latestProductSection p {
+    margin: 25px 0;
+}
+
+.latestProductSection button {
+    background-color: $footerBackgroundColor;
 }
 
 .latestProductOne {
     display: flex;
     flex-direction: row;
     width: 100%;
+    height: 50%;
 }
 
 .latestProductImage {
-    width: 50%;
+    width: calc(50% - 75px);
     height: 100%;
+    position: relative;
 }
 
 .latestProductOneImage {
     @include backgroundImages(left-image, jpg);
+    box-shadow: 25px 25px $shadowBoxColor;
+    margin-left: 25px;
+    top: -25px;
+    left: -25px;
 }
 
 .latestProductOneContent {
-    width: 50%;
-    height: 50%;
+    width: calc(50% + 75px);
+    height: 100%;
+    padding: 50px 75px;
 }
 
 .latestProductTwo {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
+    height: 50%;
+    width: 100%;
 }
 
 .latestProductTwoImage {
     @include backgroundImages(right-image, jpg);
-    width: 50%;
+    box-shadow: -25px 25px $shadowBoxColor;
+    margin-right: 25px;
+    top: -25px;
+    right: -25px;
 }
 
 .latestProductTwoContent {
-    width: 50%;
+    width: calc(50% + 75px);
+    height: 100%;
+    padding: 50px 75px;
+    text-align: right;
 }
 // end latest product section---------------------
 
 // begin mid nav section---------------------------
 .midNavSection {
-    
+    // display: flex;
+    // flex-flow: row wrap;
+    height: 80vh;
+}
+
+.flexContainerMidNav {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 50px 0;
+}
+
+.midNavSection .flexContainerMidNavElements {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.midNavIcon {
+    // width: 100px;
+    // height: 100px;
+    // background: $highlightColor;
+    // border-radius: 50%;
+    // // margin: 0 auto;
+    text-align: center;
+    // padding: 15px;
+}
+
+.midNavSection i {
+    width: 50px;
+    height: 50px;   
+    // padding: 5px;
+    border-radius: 50%;
+    // transform: translateY(50%);
+    padding-top: 30%;
+    color: #fff;
+    background: $highlightColor;
+}
+
+.flexContainerMidNavContent {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.midNavImage {
+    @include backgroundImages(banner, jpg);
+    height: 50vh;
+    width: 100%;
 }
 // end mid nav section-----------------------------
 
 // begin popular products section-------------------
+.popularProductsSection {
+    // height: 80vh;
+    padding: 100px 0;
+}
 
+.flexContainerPopularProducts {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.popularProductsContentImage {
+    @include backgroundImages(square-image, jpg);
+    width: calc(100% / 3);
+    height: 350px;
+    box-shadow: 25px 25px $shadowBoxColor;
+    margin-left: 25px;
+    position: relative;
+    top: -25px;
+    left: -25px;
+
+}
+
+.popularProductsContent {
+    width: calc((100% / 3) * 2);
+    // transform: translateY(-50%);
+    margin: auto 0;
+}
+
+.popularProductsContent p {
+    padding: 25px 0;
+}
+
+.popularProductsContent ul {
+    list-style-type: none;
+    margin: 0;
+}
+
+.popularProductsSection button {
+    background-color: $footerBackgroundColor;
+}
+// end popular products section-----------------------
+
+// begin gallery section------------------------------
+.gallerySection {
+    background-color: $primaryBackgroundColor;
+    padding: 100px 0;
+}
+
+.flexContainerGallery {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.galleryImage {
+    width: calc((100% / 3) - (20px / 3));
+    height: 50vh;
+}
+
+.galleryImage1 {
+    @include backgroundImages(gallery-image-1, jpg);
+}
+
+.galleryImage2 {
+    @include backgroundImages(gallery-image-2, jpg);
+    margin: 0 10px;
+}
+
+.galleryImage3 {
+    @include backgroundImages(gallery-image-3, jpg);
+}
+
+
+// end gallery section--------------------------------
 
 
 // end index.html styling========================
@@ -96,27 +249,93 @@
 
 
 // begin blog.html styling=========================
-.blogPostImage {
-    background: url(../assets/blog-post-image.jpg);
-    background-size: cover;
-    height: 300px;
-    width: 300px;
+
+.blogMain {
+    display: flex;
+    flex-flow: row-reverse nowrap;
 }
 
+// begin blog post section---------------------------
+.blogPost {
+    width: calc((100% / 3) * 2);
+}
+
+.blogPostImage {
+    @include backgroundImages(blog-post-image, jpg);
+    // background: url(../assets/blog-post-image.jpg);
+    // background-size: cover;
+    // height: 300px;
+    // width: 300px;
+    width: calc(100% - 25px);
+    height: 80%;
+    box-shadow: -25px 25px $shadowBoxColor;
+    position: relative;
+    top: -25%;
+    right: -25px;
+}
+
+.blogPostContent {
+    background-color: #fff;
+    position: relative;
+    top: -15%;
+}
+// end blog post section-------------------------------
+
+
+// begin blog comments section--------------------------
+.blogComments {
+    background-color: $primaryBackgroundColor;
+    position: relative;
+    top: -15%;
+}
 .blogCommentOneImage {
-    background: url(../assets/comment-1.jpg);
-    background-size: cover;
+    @include backgroundImages(comment-1, jpg);
+    // background: url(../assets/comment-1.jpg);
+    // background-size: cover;
     height: 100px;
     width: 100px;
 }
 
 .blogCommentTwoImage {
-    background: url(../assets/comment-2.jpg);
-    background-size: cover;
+    @include backgroundImages(comment-2, jpg);
+    // background: url(../assets/comment-2.jpg);
+    // background-size: cover;
     height:100px;
     width: 100px;
 }
+// end blog comments section----------------------------
 
+
+// begin blog form section-------------------------------
+
+// end blog form section-------------------------------
+.blogComments label {
+    display: none;
+}
+.blogComments button {
+    background-color: $highlightColor;
+}
+
+// begin aside section--------------------------------
+aside {
+    width: calc(100% / 3);
+    background-color: $primaryBackgroundColor;
+}
+
+.asideImage {
+    @include backgroundImages(sidebar-image, jpg);
+    height: 300px;
+    width: 300px;
+}
+
+.asideContent {
+    background-color: #fff;
+}
+
+aside ul {
+    list-style-type: disc;
+}
+// end aside section-------------------------------------
 
 
 // end blog.html styling=============================

@@ -328,11 +328,17 @@ button {
   line-height: 1.6rem;
   letter-spacing: 1px;
   text-align: center;
-  text-transform: capitalize;
+  text-transform: uppercase;
   color: #fff;
+  border: none;
 }
 
 p {
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
   margin: 0;
 }
 
@@ -402,7 +408,7 @@ nav ul {
 }
 
 nav a {
-  text-transform: capitalize;
+  text-transform: uppercase;
   text-decoration: none;
   padding: 10px;
 }
@@ -427,8 +433,8 @@ nav a:hover {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 65vh;
-  width: 65vh;
+  height: 60vh;
+  width: 60vh;
   position: absolute;
   top: -375px;
   right: 0;
@@ -436,6 +442,10 @@ nav a:hover {
 
 .aboutSection h3 {
   color: #4C0341;
+}
+
+.aboutSection p {
+  margin: 25px 0;
 }
 
 .aboutSection button {
@@ -455,7 +465,15 @@ nav a:hover {
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
-  height: 15vh;
+  height: 80vh;
+}
+
+.latestProductSection p {
+  margin: 25px 0;
+}
+
+.latestProductSection button {
+  background-color: #882C07;
 }
 
 .latestProductOne {
@@ -467,11 +485,13 @@ nav a:hover {
       -ms-flex-direction: row;
           flex-direction: row;
   width: 100%;
+  height: 50%;
 }
 
 .latestProductImage {
-  width: 50%;
+  width: calc(50% - 75px);
   height: 100%;
+  position: relative;
 }
 
 .latestProductOneImage {
@@ -479,11 +499,17 @@ nav a:hover {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  -webkit-box-shadow: 25px 25px #FE6F19;
+          box-shadow: 25px 25px #FE6F19;
+  margin-left: 25px;
+  top: -25px;
+  left: -25px;
 }
 
 .latestProductOneContent {
-  width: 50%;
-  height: 50%;
+  width: calc(50% + 75px);
+  height: 100%;
+  padding: 50px 75px;
 }
 
 .latestProductTwo {
@@ -491,9 +517,11 @@ nav a:hover {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  height: 50%;
+  width: 100%;
 }
 
 .latestProductTwoImage {
@@ -501,32 +529,254 @@ nav a:hover {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  width: 50%;
+  -webkit-box-shadow: -25px 25px #FE6F19;
+          box-shadow: -25px 25px #FE6F19;
+  margin-right: 25px;
+  top: -25px;
+  right: -25px;
 }
 
 .latestProductTwoContent {
+  width: calc(50% + 75px);
+  height: 100%;
+  padding: 50px 75px;
+  text-align: right;
+}
+
+.midNavSection {
+  height: 80vh;
+}
+
+.flexContainerMidNav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  padding: 50px 0;
+}
+
+.midNavSection .flexContainerMidNavElements {
   width: 50%;
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+}
+
+.midNavIcon {
+  text-align: center;
+}
+
+.midNavSection i {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  padding-top: 30%;
+  color: #fff;
+  background: #4C0341;
+}
+
+.flexContainerMidNavContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+}
+
+.midNavImage {
+  background: url("../assets/banner.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 50vh;
+  width: 100%;
+}
+
+.popularProductsSection {
+  padding: 100px 0;
+}
+
+.flexContainerPopularProducts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+}
+
+.popularProductsContentImage {
+  background: url("../assets/square-image.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: calc(100% / 3);
+  height: 350px;
+  -webkit-box-shadow: 25px 25px #FE6F19;
+          box-shadow: 25px 25px #FE6F19;
+  margin-left: 25px;
+  position: relative;
+  top: -25px;
+  left: -25px;
+}
+
+.popularProductsContent {
+  width: calc((100% / 3) * 2);
+  margin: auto 0;
+}
+
+.popularProductsContent p {
+  padding: 25px 0;
+}
+
+.popularProductsContent ul {
+  list-style-type: none;
+  margin: 0;
+}
+
+.popularProductsSection button {
+  background-color: #882C07;
+}
+
+.gallerySection {
+  background-color: #FAE5FF;
+  padding: 100px 0;
+}
+
+.flexContainerGallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+}
+
+.galleryImage {
+  width: calc((100% / 3) - (20px / 3));
+  height: 50vh;
+}
+
+.galleryImage1 {
+  background: url("../assets/gallery-image-1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.galleryImage2 {
+  background: url("../assets/gallery-image-2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 10px;
+}
+
+.galleryImage3 {
+  background: url("../assets/gallery-image-3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.blogMain {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-flow: row-reverse nowrap;
+          flex-flow: row-reverse nowrap;
+}
+
+.blogPost {
+  width: calc((100% / 3) * 2);
 }
 
 .blogPostImage {
-  background: url(../assets/blog-post-image.jpg);
+  background: url("../assets/blog-post-image.jpg");
   background-size: cover;
-  height: 300px;
-  width: 300px;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: calc(100% - 25px);
+  height: 80%;
+  -webkit-box-shadow: -25px 25px #FE6F19;
+          box-shadow: -25px 25px #FE6F19;
+  position: relative;
+  top: -25%;
+  right: -25px;
+}
+
+.blogPostContent {
+  background-color: #fff;
+  position: relative;
+  top: -15%;
+}
+
+.blogComments {
+  background-color: #FAE5FF;
+  position: relative;
+  top: -15%;
 }
 
 .blogCommentOneImage {
-  background: url(../assets/comment-1.jpg);
+  background: url("../assets/comment-1.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   height: 100px;
   width: 100px;
 }
 
 .blogCommentTwoImage {
-  background: url(../assets/comment-2.jpg);
+  background: url("../assets/comment-2.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   height: 100px;
   width: 100px;
+}
+
+.blogComments label {
+  display: none;
+}
+
+.blogComments button {
+  background-color: #4C0341;
+}
+
+aside {
+  width: calc(100% / 3);
+  background-color: #FAE5FF;
+}
+
+.asideImage {
+  background: url("../assets/sidebar-image.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 300px;
+  width: 300px;
+}
+
+.asideContent {
+  background-color: #fff;
+}
+
+aside ul {
+  list-style-type: disc;
 }
 
 footer {
@@ -535,4 +785,6 @@ footer {
   line-height: 1.6rem;
   text-align: center;
   background-color: #882C07;
+  color: #fff;
+  text-transform: capitalize;
 }
