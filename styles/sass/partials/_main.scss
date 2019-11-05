@@ -17,18 +17,26 @@
 .aboutSection {
     position: relative;
     text-align: center;
-    padding: 15vh 0;
+    padding: 10vh 0;
 }
 
 .aboutImage {
-    // background: url("../assets/home-box-header.png");
-    @include backgroundImages(home-box-header, png)
-    height: 60vh;
-    width: 60vh;
-    position: absolute;
-    top: -375px;
-    right: 0;
+    // @include backgroundImages(home-box-header, png)
+    // height: 60vh;
+    // width: 60vh;
+    // position: absolute;
+    // top: -375px;
+    // right: 0;
+}
 
+.aboutImage img {
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+    width: 50%;
+    // height: 100%;
+    margin-left: 50%;
+    margin-top: -40%;
 }
 
 .aboutSection h3 {
