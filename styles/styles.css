@@ -330,6 +330,7 @@ button {
 
 p {
   margin: 0;
+  line-height: 1.8rem;
 }
 
 ul {
@@ -641,18 +642,19 @@ nav a:hover {
 }
 
 .popularProductsContentImage {
-  background: url("../assets/square-image.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   width: calc(100% / 3);
-  height: 350px;
+  margin-left: 25px;
+}
+
+.popularProductsContentImage img {
+  max-width: 100%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 80%;
+  height: 100%;
   -webkit-box-shadow: 25px 25px #FE6F19;
           box-shadow: 25px 25px #FE6F19;
-  margin-left: 25px;
-  position: relative;
-  top: -25px;
-  left: -25px;
 }
 
 .popularProductsContent {
@@ -686,6 +688,9 @@ nav a:hover {
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .galleryImage {
@@ -693,26 +698,11 @@ nav a:hover {
   height: 50vh;
 }
 
-.galleryImage1 {
-  background: url("../assets/gallery-image-1.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.galleryImage2 {
-  background: url("../assets/gallery-image-2.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  margin: 0 10px;
-}
-
-.galleryImage3 {
-  background: url("../assets/gallery-image-3.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+.galleryImage img {
+  max-width: 100%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .blogMain {

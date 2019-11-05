@@ -206,14 +206,24 @@
 }
 
 .popularProductsContentImage {
-    @include backgroundImages(square-image, jpg);
+    // @include backgroundImages(square-image, jpg);
     width: calc(100% / 3);
-    height: 350px;
-    box-shadow: 25px 25px $shadowBoxColor;
+    // height: 350px;
+    // box-shadow: 25px 25px $shadowBoxColor;
     margin-left: 25px;
-    position: relative;
-    top: -25px;
-    left: -25px;
+    // position: relative;
+    // top: -25px;
+    // left: -25px;
+}
+
+.popularProductsContentImage img {
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+    width: 80%;
+    // height: 350px;
+    height: 100%;
+        box-shadow: 25px 25px $shadowBoxColor;
 
 }
 
@@ -246,6 +256,7 @@
 .flexContainerGallery {
     display: flex;
     flex-flow: row nowrap;
+    justify-content: space-between;
 }
 
 .galleryImage {
@@ -253,17 +264,23 @@
     height: 50vh;
 }
 
+.galleryImage img {
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
 .galleryImage1 {
-    @include backgroundImages(gallery-image-1, jpg);
+    // @include backgroundImages(gallery-image-1, jpg);
 }
 
 .galleryImage2 {
-    @include backgroundImages(gallery-image-2, jpg);
-    margin: 0 10px;
+    // @include backgroundImages(gallery-image-2, jpg);
+    // margin: 0 10px;
 }
 
 .galleryImage3 {
-    @include backgroundImages(gallery-image-3, jpg);
+    // @include backgroundImages(gallery-image-3, jpg);
 }
 
 
