@@ -341,7 +341,7 @@ ul {
 }
 
 header {
-  height: 60vh;
+  height: 90vh;
   padding-top: 1%;
 }
 
@@ -450,19 +450,17 @@ nav a:hover {
 .aboutSection {
   position: relative;
   text-align: center;
-  padding: 15vh 0;
+  padding: 10vh 0;
 }
 
-.aboutImage {
-  background: url("../assets/home-box-header.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 60vh;
-  width: 60vh;
-  position: absolute;
-  top: -375px;
-  right: 0;
+.aboutImage img {
+  max-width: 100%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 50%;
+  margin-left: 50%;
+  margin-top: -40%;
 }
 
 .aboutSection h3 {
