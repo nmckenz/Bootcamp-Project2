@@ -235,10 +235,6 @@ html {
   overflow: hidden;
 }
 
-* {
-  border: 1px solid red;
-}
-
 body {
   font-family: 'Lato', sans-serif;
   font-size: 125%;
@@ -331,6 +327,7 @@ button {
   text-transform: uppercase;
   color: #fff;
   border: none;
+  padding: 5px;
 }
 
 p {
@@ -340,6 +337,16 @@ p {
 ul {
   list-style-type: none;
   margin: 0;
+  padding: 0;
+}
+
+header {
+  height: 60vh;
+  padding-top: 1%;
+}
+
+a:visited {
+  color: #4C0341;
 }
 
 header.headerIndex {
@@ -347,8 +354,6 @@ header.headerIndex {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 60vh;
-  padding-top: 1%;
 }
 
 header.headerBlog {
@@ -356,7 +361,17 @@ header.headerBlog {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 60vh;
+}
+
+.headerBlog {
+  position: relative;
+}
+
+.headerBlog h2 {
+  display: inline-block;
+  top: 35%;
+  left: 35%;
+  position: absolute;
 }
 
 header.headerContact {
@@ -364,7 +379,17 @@ header.headerContact {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 60vh;
+}
+
+.headerContact {
+  position: relative;
+}
+
+.headerContact h2 {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 38%;
 }
 
 nav {
@@ -703,32 +728,78 @@ nav a:hover {
 
 .blogPost {
   width: calc((100% / 3) * 2);
+  margin-top: -15%;
+  z-index: 10;
 }
 
 .blogPostImage {
-  background: url("../assets/blog-post-image.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: calc(100% - 25px);
-  height: 80%;
   -webkit-box-shadow: -25px 25px #FE6F19;
           box-shadow: -25px 25px #FE6F19;
-  position: relative;
-  top: -25%;
-  right: -25px;
+  margin-left: 25px;
+}
+
+.blogPostImage img {
+  max-width: 100%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .blogPostContent {
   background-color: #fff;
-  position: relative;
-  top: -15%;
+  margin: 75px 10% 50px 5%;
+}
+
+article h3 {
+  margin-bottom: 12.5px;
+}
+
+.postDate {
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.postDate span {
+  text-transform: none;
+}
+
+article p:not(.postDate) {
+  margin: 25px 0;
 }
 
 .blogComments {
   background-color: #FAE5FF;
-  position: relative;
-  top: -15%;
+  padding: 50px 0 100px;
+}
+
+.blogComments h3 {
+  margin-left: 5%;
+}
+
+.blogCommentsContent {
+  padding-bottom: 50px;
+}
+
+.blogCommentContent li:nth-of-type(1) {
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.blogCommentContent li:nth-of-type(2) {
+  margin: 12.5px 0;
+}
+
+.blogCommentOne, .blogCommentTwo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  padding: 25px 0;
 }
 
 .blogCommentOneImage {
@@ -740,6 +811,10 @@ nav a:hover {
   width: 100px;
 }
 
+.blogCommentOneContent, .blogCommentTwoContent {
+  width: 90%;
+}
+
 .blogCommentTwoImage {
   background: url("../assets/comment-2.jpg");
   background-size: cover;
@@ -749,12 +824,81 @@ nav a:hover {
   width: 100px;
 }
 
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: 5%;
+  margin-right: 10%;
+}
+
 .blogComments label {
   display: none;
 }
 
+.blogComments input {
+  background-color: #FAE5FF;
+}
+
+input[type="text"], input[type="email"] {
+  width: calc(50% - 12.5px);
+  padding: 25px;
+  border: none;
+  border-bottom: 1px solid #FE6F19;
+}
+
+input::-webkit-input-placeholder {
+  text-transform: capitalize;
+}
+
+input:-ms-input-placeholder {
+  text-transform: capitalize;
+}
+
+input::-ms-input-placeholder {
+  text-transform: capitalize;
+}
+
+input::placeholder {
+  text-transform: capitalize;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  margin: 25px 0;
+  padding: 25px;
+  border: 1px solid #FE6F19;
+  background-color: #FAE5FF;
+  resize: none;
+}
+
+textarea::-webkit-input-placeholder {
+  text-transform: capitalize;
+}
+
+textarea:-ms-input-placeholder {
+  text-transform: capitalize;
+}
+
+textarea::-ms-input-placeholder {
+  text-transform: capitalize;
+}
+
+textarea::placeholder {
+  text-transform: capitalize;
+}
+
 .blogComments button {
   background-color: #4C0341;
+  width: 100%;
 }
 
 aside {
@@ -763,20 +907,126 @@ aside {
 }
 
 .asideImage {
-  background: url("../assets/sidebar-image.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   height: 300px;
-  width: 300px;
+  width: 90%;
+  -webkit-box-shadow: 12.5px 0px #fff;
+          box-shadow: 12.5px 0px #fff;
+  margin-top: 75px;
+}
+
+.asideImage img {
+  max-width: 100%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .asideContent {
   background-color: #fff;
+  margin-left: 33.3%;
+  margin-right: calc(10% - 12.5px);
+  padding: 12.5px 12.5px 0px 0px;
+}
+
+.asideContent div {
+  padding: 12.5px;
 }
 
 aside ul {
   list-style-type: disc;
+}
+
+.contactMain {
+  background-color: #FAE5FF;
+  padding: 100px 0;
+}
+
+.flexContainerContactMain {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-flow: row-reverse nowrap;
+          flex-flow: row-reverse nowrap;
+}
+
+.contactForm {
+  width: calc((100% / 3) * 2);
+  background-color: #FAE5FF;
+  margin-top: -20%;
+  margin-left: 25px;
+  z-index: 10;
+}
+
+.contactInfo {
+  width: calc(100% / 3);
+}
+
+.contactForm form {
+  margin: 0;
+  padding: 5%;
+  -webkit-box-shadow: -25px 25px #FE6F19;
+          box-shadow: -25px 25px #FE6F19;
+  background-color: #fff;
+}
+
+.contactForm label {
+  display: none;
+}
+
+.contactForm textarea {
+  background-color: #fff;
+}
+
+.contactForm button {
+  width: 100%;
+  background-color: #882C07;
+}
+
+.listItemEmail {
+  padding: 12.5px 0;
+}
+
+.contactEmail {
+  font-family: 'Pompiere', cursive;
+  font-size: 1.5rem;
+  letter-spacing: 1.3px;
+  color: #4C0341;
+  margin: 0;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.socialLinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  padding-bottom: 5px;
+}
+
+.socialLinks a {
+  width: 25%;
+  margin-right: 25px;
+  color: #4C0341;
+}
+
+.contactInfoDetails {
+  text-transform: capitalize;
+}
+
+.contactInfoDetails li {
+  padding-bottom: 5px;
+}
+
+.contactInfoDetails li:nth-of-type(4) {
+  text-transform: uppercase;
 }
 
 footer {

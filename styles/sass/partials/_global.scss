@@ -31,7 +31,7 @@
 //     font-family: 'Lato', sans-serif;
 
 * {
-    border: 1px solid red;
+    // border: 1px solid red;
 }
 
 body {
@@ -171,6 +171,7 @@ button {
     text-transform: uppercase;
     color: #fff;
     border: none;
+    padding: 5px;
 }
 
 // Buttons
@@ -184,4 +185,14 @@ p {
 ul {
     list-style-type: none;
     margin: 0;
+    padding: 0;
+}
+
+header {
+    height: $heroHeights;
+    padding-top: 1%;
+}
+
+a:visited {
+    color: $highlightColor;
 }
