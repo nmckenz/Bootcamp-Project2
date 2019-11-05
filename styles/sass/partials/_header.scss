@@ -1,8 +1,6 @@
 // begin index.html styling---------------------------
 header.headerIndex {
     @include backgroundImages(header-image, jpg);
-    // height: $heroHeights;
-    // padding-top: 1%;
 }
 
 .headerIndex h1 {
@@ -17,8 +15,6 @@ header.headerIndex {
 // begin blog.html styling-----------------------------
 header.headerBlog {
     @include backgroundImages(blog-header, jpg);
-    // height: $heroHeights;
-
 }
 
 .headerBlog {
@@ -27,7 +23,7 @@ header.headerBlog {
 
 .headerBlog h2 {
     display: inline-block;
-    top: 35%;
+    top: 45%;
     left: 35%;
     position: absolute;
 }
@@ -38,7 +34,6 @@ header.headerBlog {
 // begin contact.html styling--------------------------
 header.headerContact {
     @include backgroundImages(contact-image, jpg);
-    // height: $heroHeights;
 }
 
 .headerContact {

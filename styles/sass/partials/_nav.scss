@@ -5,6 +5,7 @@ nav {
     line-height: 1.45rem;
     letter-spacing: 1px;
     text-align: center;
+    width: 35%;
 }
 
 // Nav
@@ -21,7 +22,6 @@ nav ul {
     list-style-type: none;
     display: flex;
     flex-flow: row nowrap;
-    width: 40%;
     justify-content: space-between;
     align-items: flex-start;
 

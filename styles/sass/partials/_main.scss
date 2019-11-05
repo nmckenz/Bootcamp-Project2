@@ -1,13 +1,6 @@
-.findOutButton {
-    // width: 50px;
-    // height: 15px;
-}
-
 // begin index.html styling========================
 
 // TO DO
-// fix spacing on new products
-// fix margins between icon and text in mid nav
 
 
 .aboutSection, .midNavSection {
@@ -20,15 +13,6 @@
     // padding: 10vh 0;
     padding-top: 85px;
     padding-bottom: 175px;
-}
-
-.aboutImage {
-    // @include backgroundImages(home-box-header, png)
-    // height: 60vh;
-    // width: 60vh;
-    // position: absolute;
-    // top: -375px;
-    // right: 0;
 }
 
 .aboutImage img {
@@ -95,10 +79,7 @@
 }
 
 .latestProductOne {
-    // display: flex;
     flex-direction: row;
-    // width: 100%;
-    // height: 50%;
 }
 
 
@@ -110,17 +91,8 @@
     left: -25px;
 }
 
-.latestProductOneContent {
-    // width: calc(50% + 75px);
-    // height: 100%;
-    // padding: 50px 150px;
-}
-
 .latestProductTwo {
-    // display: flex;
     flex-direction: row-reverse;
-    // height: 50%;
-    // width: 100%;
 }
 
 .latestProductTwoImage {
@@ -132,17 +104,12 @@
 }
 
 .latestProductTwoContent {
-    // width: calc(50% + 75px);
-    // height: 100%;
-    // padding: 50px 150px;
     text-align: right;
 }
 // end latest product section---------------------
 
 // begin mid nav section---------------------------
 .midNavSection {
-    // display: flex;
-    // flex-flow: row wrap;
     height: 100vh;
 }
 
@@ -161,22 +128,14 @@
 }
 
 .midNavIcon {
-    // width: 100px;
-    // height: 100px;
-    // background: $highlightColor;
-    // border-radius: 50%;
-    // // margin: 0 auto;
     text-align: center;
-    // padding: 15px;
     margin-right: 12.5px;
 }
 
 .midNavSection i {
     width: 50px;
     height: 50px;   
-    // padding: 5px;
     border-radius: 50%;
-    // transform: translateY(50%);
     padding-top: 30%;
     color: #fff;
     background: $highlightColor;
@@ -206,14 +165,7 @@
 }
 
 .popularProductsContentImage {
-    // @include backgroundImages(square-image, jpg);
     width: calc(100% / 3);
-    // height: 350px;
-    // box-shadow: 25px 25px $shadowBoxColor;
-    margin-left: 25px;
-    // position: relative;
-    // top: -25px;
-    // left: -25px;
 }
 
 .popularProductsContentImage img {
@@ -221,15 +173,13 @@
     display: block;
     object-fit: cover;
     width: 80%;
-    // height: 350px;
     height: 100%;
-        box-shadow: 25px 25px $shadowBoxColor;
+    box-shadow: 25px 25px $shadowBoxColor;
 
 }
 
 .popularProductsContent {
     width: calc((100% / 3) * 2);
-    // transform: translateY(-50%);
     margin: auto 0;
 }
 
@@ -270,19 +220,6 @@
     object-fit: cover;
 }
 
-.galleryImage1 {
-    // @include backgroundImages(gallery-image-1, jpg);
-}
-
-.galleryImage2 {
-    // @include backgroundImages(gallery-image-2, jpg);
-    // margin: 0 10px;
-}
-
-.galleryImage3 {
-    // @include backgroundImages(gallery-image-3, jpg);
-}
-
 
 // end gallery section--------------------------------
 
@@ -298,30 +235,21 @@
     flex-flow: row-reverse nowrap;
 }
 
+.blogWrapper {
+    margin-left: 5%;
+    margin-right: 10%;
+}
+
 // begin blog post section---------------------------
 .blogPost {
     width: calc((100% / 3) * 2);
-    margin-top: -15%;
+    margin-top: -20%;
     z-index: 10;
 }
 
 .blogPostImage {
-    // @include backgroundImages(blog-post-image, jpg);
-    // background: url(../assets/blog-post-image.jpg);
-    // background-size: cover;
-    // height: 300px;
-    // width: 300px;
-    // width: calc(100% - 25px);
-    // max-width: 100%;
-    // display: inline-block;
-    // height: 40%;
     box-shadow: -25px 25px $shadowBoxColor;
-    // position: relative;
-    // top: -15%;
-    // right: -25px;
-    // margin-top: -15%;
     margin-left: 25px;
-    // z-index: 10;
 }
 
 .blogPostImage img {
@@ -334,12 +262,7 @@
 
 .blogPostContent {
     background-color: #fff;
-    // position: relative;
-    // top: -10%;
-    // margin-left: 5%;
-    // margin-right: 10%;
     margin: 75px 10% 50px 5%;
-    // margin-bottom: 50px;
 }
 
 article h3 {
@@ -349,7 +272,6 @@ article h3 {
 .postDate {
     font-weight: 700;
     text-transform: capitalize;
-    // margin-top: 12.5px;
 }
 
 .postDate span {
@@ -367,13 +289,11 @@ article p:not(.postDate) {
 // begin blog comments section--------------------------
 .blogComments {
     background-color: $primaryBackgroundColor;
-    // position: relative;
-    // top: -10%;
     padding: 50px 0 100px;
 }
 
 .blogComments h3 {
-    margin-left: 5%;
+    margin-left: 2.5%;
 }
 
 .blogCommentsContent {
@@ -395,10 +315,12 @@ article p:not(.postDate) {
     padding: 25px 0;
 }
 
+.blogCommentImage {
+    margin-right: 20px;
+}
+
 .blogCommentOneImage {
     @include backgroundImages(comment-1, jpg);
-    // background: url(../assets/comment-1.jpg);
-    // background-size: cover;
     height: 100px;
     width: 100px;
 }
@@ -410,8 +332,6 @@ article p:not(.postDate) {
 
 .blogCommentTwoImage {
     @include backgroundImages(comment-2, jpg);
-    // background: url(../assets/comment-2.jpg);
-    // background-size: cover;
     height:100px;
     width: 100px;
 }
@@ -423,8 +343,6 @@ form {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    margin-left: 5%;
-    margin-right: 10%;
 }
 
 .blogComments label {
@@ -445,14 +363,6 @@ input[type="text"], input[type="email"] {
 input::placeholder {
     text-transform: capitalize;
 }
-
-// input[type="textarea"] {
-//     width: 100%;
-//     height: 150px;
-//     margin: 25px 0;
-//     padding: 25px;
-//     border: 1px solid $shadowBoxColor;
-// }
 
 textarea {
     width: 100%;
@@ -479,15 +389,13 @@ textarea::placeholder {
 aside {
     width: calc(100% / 3);
     background-color: $primaryBackgroundColor;
+    position: relative;
 }
 
 .asideImage {
-    // @include backgroundImages(sidebar-image, jpg);
-    height: 300px;
-    // width: 300px;
     width: 90%;
-    box-shadow: 12.5px 0px #fff;
-    margin-top: 75px;
+    position: absolute;
+    top: 65px;
 }
 
 .asideImage img {
@@ -500,10 +408,14 @@ aside {
 
 .asideContent {
     background-color: #fff;
-    // width: 70%;
     margin-left: 33.3%;
     margin-right: calc(10% - 12.5px);
     padding: 12.5px 12.5px 0px 0px;
+    height: 700px;
+    margin-top: 75px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
 }
 
 .asideContent div {
@@ -512,6 +424,7 @@ aside {
 
 aside ul {
     list-style-type: disc;
+    margin-left: 20px;
 }
 // end aside section-------------------------------------
 
@@ -534,7 +447,7 @@ aside ul {
 .contactForm {
     width: calc((100% / 3) * 2);
     background-color: $primaryBackgroundColor;
-    margin-top: -20%;
+    margin-top: -30%;
     margin-left: 25px;
     z-index: 10;
 }
@@ -556,6 +469,7 @@ aside ul {
 
 .contactForm textarea {
     background-color: #fff;
+    height: 300px;
 }
 
 .contactForm button {
@@ -605,10 +519,6 @@ aside ul {
 
 
 // end contact info section-----------------------------
-
-
-
-
 
 
 // end contact.html styling==========================

@@ -373,7 +373,7 @@ header.headerBlog {
 
 .headerBlog h2 {
   display: inline-block;
-  top: 35%;
+  top: 45%;
   left: 35%;
   position: absolute;
 }
@@ -403,6 +403,7 @@ nav {
   line-height: 1.45rem;
   letter-spacing: 1px;
   text-align: center;
+  width: 35%;
 }
 
 .flexContainerNav {
@@ -427,7 +428,6 @@ nav ul {
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
-  width: 40%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -643,7 +643,6 @@ nav a:hover {
 
 .popularProductsContentImage {
   width: calc(100% / 3);
-  margin-left: 25px;
 }
 
 .popularProductsContentImage img {
@@ -715,9 +714,14 @@ nav a:hover {
           flex-flow: row-reverse nowrap;
 }
 
+.blogWrapper {
+  margin-left: 5%;
+  margin-right: 10%;
+}
+
 .blogPost {
   width: calc((100% / 3) * 2);
-  margin-top: -15%;
+  margin-top: -20%;
   z-index: 10;
 }
 
@@ -764,7 +768,7 @@ article p:not(.postDate) {
 }
 
 .blogComments h3 {
-  margin-left: 5%;
+  margin-left: 2.5%;
 }
 
 .blogCommentsContent {
@@ -789,6 +793,10 @@ article p:not(.postDate) {
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
   padding: 25px 0;
+}
+
+.blogCommentImage {
+  margin-right: 20px;
 }
 
 .blogCommentOneImage {
@@ -824,8 +832,6 @@ form {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-left: 5%;
-  margin-right: 10%;
 }
 
 .blogComments label {
@@ -893,14 +899,13 @@ textarea::placeholder {
 aside {
   width: calc(100% / 3);
   background-color: #FAE5FF;
+  position: relative;
 }
 
 .asideImage {
-  height: 300px;
   width: 90%;
-  -webkit-box-shadow: 12.5px 0px #fff;
-          box-shadow: 12.5px 0px #fff;
-  margin-top: 75px;
+  position: absolute;
+  top: 65px;
 }
 
 .asideImage img {
@@ -917,6 +922,18 @@ aside {
   margin-left: 33.3%;
   margin-right: calc(10% - 12.5px);
   padding: 12.5px 12.5px 0px 0px;
+  height: 700px;
+  margin-top: 75px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .asideContent div {
@@ -925,6 +942,7 @@ aside {
 
 aside ul {
   list-style-type: disc;
+  margin-left: 20px;
 }
 
 .contactMain {
@@ -945,7 +963,7 @@ aside ul {
 .contactForm {
   width: calc((100% / 3) * 2);
   background-color: #FAE5FF;
-  margin-top: -20%;
+  margin-top: -30%;
   margin-left: 25px;
   z-index: 10;
 }
@@ -968,6 +986,7 @@ aside ul {
 
 .contactForm textarea {
   background-color: #fff;
+  height: 300px;
 }
 
 .contactForm button {
