@@ -396,6 +396,11 @@
 .blogMain {
     display: flex;
     flex-flow: row-reverse nowrap;
+
+    @media (max-width: 910px) {
+        flex-flow: column nowrap;
+        // margin: 0 auto;
+    }
 }
 
 .blogWrapper {
@@ -408,6 +413,10 @@
     width: calc((100% / 3) * 2);
     margin-top: -20%;
     z-index: 10;
+
+    @media (max-width: 910px) {
+        width: 100%;
+    }
 }
 
 .blogPostImage {
@@ -521,6 +530,10 @@ input[type="text"], input[type="email"] {
     padding: 25px;
     border: none;
     border-bottom: 1px solid $shadowBoxColor;
+
+    @media (max-width: 640px) {
+        width: 100%;
+    }
 }
 
 input::placeholder {
@@ -553,12 +566,22 @@ aside {
     width: calc(100% / 3);
     background-color: $primaryBackgroundColor;
     position: relative;
+
+    @media (max-width: 910px) {
+        width: 100%;
+    }
 }
 
 .asideImage {
     width: 90%;
     position: absolute;
     top: 65px;
+
+    @media (max-width: 910px) {
+        width: 100%;
+        position: relative;
+        top: 0;
+    }
 }
 
 .asideImage img {
@@ -567,6 +590,11 @@ aside {
     object-fit: cover;
     width: 100%;
     height: 100%;
+
+    @media (max-width: 910px) {
+        margin: 0 auto;
+        width: auto;
+    }
 }
 
 .asideContent {
@@ -579,10 +607,34 @@ aside {
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-end;
+
+    @media (max-width: 1275px) {
+        margin-left: 30%;
+    }
+
+    @media (max-width: 1205px) {
+        margin-left: 25%;
+    }
+
+    @media (max-width: 1120px) {
+        margin-left: 20%;
+    }
+
+    @media (max-width: 910px) {
+        margin: 0;
+        height: auto;
+        text-align: center;
+    }
 }
 
 .asideContent div {
     padding: 12.5px;
+}
+
+.asideContent p {
+    @media (max-width: 1120px) {
+        display: inline-block;
+    }
 }
 
 aside ul {

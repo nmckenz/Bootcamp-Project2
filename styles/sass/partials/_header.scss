@@ -28,6 +28,28 @@ header.headerIndex {
 // begin blog.html styling-----------------------------
 header.headerBlog {
     @include backgroundImages(blog-header, jpg);
+
+    @media (max-width: 1300px) {
+        height: 80vh;
+    }
+
+    @media (max-width: 1020px) {
+        height: 70vh;
+        background-position: 20% 50%;
+    }
+
+    @media (max-width: 940px) {
+        height: 65vh;
+        background-position: 25% 50%;
+    }
+
+    @media (max-width: 820px) {
+        background-position: 50% 50%;
+    }
+
+    @media (max-width: 680px) {
+        height: 60vh;
+    }
 }
 
 .headerBlog {
