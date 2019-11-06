@@ -1,17 +1,9 @@
-// @mixin headerBackground($imageName) {
-//     $imageURL:"../assets/#{$imageName}.jpg";
-//     background: url($imageURL);
-//     background-size: cover;
-//     height: 60vh;
-// }
-
 @mixin backgroundImages($imageName, $imageType) {
     $imageURL:"../assets/#{$imageName}.#{$imageType}";
     background: url($imageURL);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    // height: 60vh;
 }
 
 
