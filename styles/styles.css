@@ -405,6 +405,20 @@ header.headerContact {
   background-position: center;
 }
 
+@media (max-width: 1450px) {
+  header.headerContact {
+    height: 80vh;
+    background-position: 5% 50%;
+  }
+}
+
+@media (max-width: 1020px) {
+  header.headerContact {
+    height: 70vh;
+    background-position: 10% 50%;
+  }
+}
+
 .headerContact {
   position: relative;
 }
@@ -414,6 +428,18 @@ header.headerContact {
   position: absolute;
   top: 50%;
   left: 38%;
+}
+
+@media (max-width: 550px) {
+  .headerContact h2 {
+    left: 49%;
+  }
+}
+
+@media (max-width: 375px) {
+  .headerContact h2 {
+    top: 60%;
+  }
 }
 
 nav {
@@ -1324,6 +1350,15 @@ aside ul {
           flex-flow: row-reverse nowrap;
 }
 
+@media (max-width: 1150px) {
+  .flexContainerContactMain {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+  }
+}
+
 .contactForm {
   width: calc((100% / 3) * 2);
   background-color: #FAE5FF;
@@ -1332,8 +1367,46 @@ aside ul {
   z-index: 10;
 }
 
+@media (max-width: 1300px) {
+  .contactForm {
+    margin-top: -35%;
+  }
+}
+
+@media (max-width: 1150px) {
+  .contactForm {
+    width: 100%;
+  }
+}
+
+@media (max-width: 800px) {
+  .contactForm {
+    margin-top: -40%;
+  }
+}
+
+@media (max-width: 685px) {
+  .contactForm {
+    margin-top: -45%;
+  }
+}
+
+@media (max-width: 550px) {
+  .contactForm {
+    margin-top: -65%;
+  }
+}
+
 .contactInfo {
   width: calc(100% / 3);
+}
+
+@media (max-width: 1150px) {
+  .contactInfo {
+    width: 100%;
+    margin-top: 50px;
+    text-align: center;
+  }
 }
 
 .contactForm form {
@@ -1383,10 +1456,24 @@ aside ul {
   padding-bottom: 5px;
 }
 
+@media (max-width: 1150px) {
+  .socialLinks {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .socialLinks a {
   width: 25%;
   margin-right: 25px;
   color: #4C0341;
+}
+
+@media (max-width: 1150px) {
+  .socialLinks a {
+    margin: 25px;
+  }
 }
 
 .contactInfoDetails {

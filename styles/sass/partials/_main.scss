@@ -604,6 +604,10 @@ aside ul {
 .flexContainerContactMain {
     display: flex;
     flex-flow: row-reverse nowrap;
+
+    @media (max-width: 1150px) {
+        flex-flow: column nowrap;
+    }
 }
 
 
@@ -613,10 +617,36 @@ aside ul {
     margin-top: -30%;
     margin-left: 25px;
     z-index: 10;
+
+    @media (max-width: 1300px) {
+        margin-top: -35%;
+    }
+
+    @media (max-width: 1150px) {
+        width: 100%;
+    }
+
+    @media (max-width: 800px) {
+        margin-top: -40%;
+    }
+
+    @media (max-width: 685px) {
+        margin-top: -45%;
+    }
+
+    @media (max-width: 550px) {
+        margin-top: -65%;
+    }
 }
 
 .contactInfo {
     width: calc(100% / 3);
+
+    @media (max-width: 1150px) {
+        width: 100%;
+        margin-top: 50px;
+        text-align: center;
+    }
 }
 
 // begin contact form section-----------------------
@@ -660,12 +690,20 @@ aside ul {
     display: flex;
     flex-flow: row nowrap;
     padding-bottom: 5px;
+
+    @media (max-width: 1150px) {
+        justify-content: center;
+    }
 }
 
 .socialLinks a {
     width: 25%;
     margin-right: 25px;
     color: $highlightColor;
+
+    @media (max-width: 1150px) {
+        margin: 25px;
+    }
 }
 
 .contactInfoDetails {

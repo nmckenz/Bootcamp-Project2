@@ -47,6 +47,16 @@ header.headerBlog {
 // begin contact.html styling--------------------------
 header.headerContact {
     @include backgroundImages(contact-image, jpg);
+
+    @media (max-width: 1450px) {
+        height: 80vh;
+        background-position: 5% 50%;
+    }
+
+    @media (max-width: 1020px) {
+        height: 70vh;
+        background-position: 10% 50%;
+    }
 }
 
 .headerContact {
@@ -58,5 +68,13 @@ header.headerContact {
     position: absolute;
     top: 50%;
     left: 38%;
+
+    @media (max-width: 550px) {
+        left: 49%;
+    }
+
+    @media (max-width: 375px) {
+        top: 60%;
+    }
 }
 // end contact.html styling----------------------------
