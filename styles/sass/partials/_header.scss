@@ -1,6 +1,14 @@
 // begin index.html styling---------------------------
 header.headerIndex {
     @include backgroundImages(header-image, jpg);
+
+    @media (max-width: 1300px) {
+        height: 80vh;
+    }
+
+    @media (max-width: 1020px) {
+        height: 70vh;
+    }
 }
 
 .headerIndex h1 {
