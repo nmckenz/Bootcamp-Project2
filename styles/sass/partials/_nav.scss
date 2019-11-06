@@ -13,6 +13,22 @@ nav {
         right: 0;
         width: 15%;
     }
+
+    @media (max-width: 750px) {
+        width: 20%;
+    }
+
+    @media (max-width: 565px) {
+        width: 25%;
+    }
+
+    @media (max-width: 475px) {
+        width: 30%;
+    }
+
+    @media (max-width: 395px) {
+        width: 35%;
+    }
 }
 
 .flexContainerNav {
