@@ -6,6 +6,13 @@ nav {
     letter-spacing: 1px;
     text-align: center;
     width: 35%;
+    transition: all 0.5s;
+    @media (max-width: 1040px) {
+        position: absolute; 
+        top: -230px;
+        right: 0;
+        width: 15%;
+    }
 }
 
 .flexContainerNav {
@@ -20,16 +27,107 @@ nav ul {
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: flex-start;
+    @media (max-width: 1040px) {
+        flex-flow: column nowrap;
+        align-items: flex-end;
+        background-color: rgba(255,255,255,0.2);
+        height: 225px;
+        justify-content: flex-end;
+        margin-right: 10px;
+    }
+}
 
+nav li {
+    @media (max-width: 1040px) {
+        margin-top: 10px;
+    }
 }
 
 nav a {
     text-transform: uppercase;
     text-decoration: none;
     padding: 10px;
+    @media (max-width: 1040px) {
+        color: #fff;
+    }
 }
 
 nav a:hover {
     background-color: $highlightColor;
     color: #fff;
+}
+
+// -------------------------
+// mobile nav
+
+
+.fa-bars {
+    font-size: 4rem;
+    color: #fff;
+}
+
+.fa-times {
+    // display: none;
+    font-size: 4rem;
+    color: #fff;
+}
+
+
+input[type="checkbox"] {
+	display: none;
+}
+
+label[icon-type="bars"] {
+    display: none;
+    position: absolute;
+    z-index: 20;
+    top: 15px;
+    right: 15px;
+    transition: all 0.5s;
+
+    @media (max-width: 1040px) {
+        display: block;
+    }
+}
+
+input[type="checkbox"]:checked + nav {
+    top: 0;
+    z-index: 10;
+
+    @media (max-width: 1040px) {
+        position: fixed;
+    }
+}
+
+input[type="checkbox"]:checked ~ label[icon-type="bars"] {
+    // transform: rotate(90deg);
+}
+
+label[icon-type="times"] {
+    display: none;
+    position: absolute;
+    z-index: 20;
+    top: 15px;
+    right: 15px;
+    transition: all 0.5s;
+
+    @media (max-width: 1040px) {
+        display: block;
+        // position: fixed;
+    }
+}
+
+input[type="checkbox"]:checked ~ label[icon-type="bars"] {
+    transform: scale(0);
+}
+
+input[type="checkbox"] ~ label[icon-type="times"] {
+    transform: scale(0);
+    display: block;
+    position: fixed;
+}
+
+input[type="checkbox"]:checked ~ label[icon-type="times"] {
+    transform: scale(1)
+    
 }
