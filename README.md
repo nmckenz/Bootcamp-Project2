@@ -1,6 +1,5 @@
-# Bootcamp-Project2
-Juno College - Bootcamp - Project 2
+# Shoe Kloset
 
-Multi-page PSD conversion with responsive design.
+A Multi-page PSD conversion with responsive design.
 
 https://nmckenz.github.io/Bootcamp-Project2/
